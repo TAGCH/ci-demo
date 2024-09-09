@@ -1,3 +1,4 @@
+[![Unit Tests](https://github.com/TAGCH/ci-demo/actions/workflows/python-unittests.yml/badge.svg)](https://github.com/TAGCH/ci-demo/actions/workflows/python-unittests.yml) [![Flake8](https://github.com/TAGCH/ci-demo/actions/workflows/python-flake8.yml/badge.svg)](https://github.com/TAGCH/ci-demo/actions/workflows/python-flake8.yml)
 Continuous Integration Demo
 ===========================
 
