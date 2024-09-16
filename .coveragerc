@@ -1,0 +1,35 @@
+[run]
+# Enable branch coverage
+branch = True
+
+[report]
+# Report options
+show_missing = True
+skip_covered = True
+exclude_lines =
+    # Don't count lines that are just pass statements
+    pragma: no cover
+    # Don't count lines that are commented out
+    # or that are within code blocks not executed
+    if __name__ == '__main__': 
+    # Exclude lines that are used for debugging
+    # and other lines that are not useful
+    raise AssertionError
+    continue
+
+# Include specific files or directories
+include = 
+    */*.py
+
+# Exclude specific files or directories
+omit =
+    */tests/*
+    */migrations/*
+    */settings.py
+    */admin.py
+
+[html]
+directory = htmlcov
+
+[xml]
+output = coverage.xml
