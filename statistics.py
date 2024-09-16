@@ -9,6 +9,19 @@ def average(data):
     :param data: List of numeric values.
     :returns: The average of the values in data.
     :raises ValueError: If the list is empty.
+
+    >>> average([])
+    Traceback (most recent call last):
+        ...
+    ValueError: List must contain at least one value
+    >>> average([1])
+    1.0
+    >>> average([1, 1, 1, 1])
+    1.0
+    >>> average([1, 2])
+    1.5
+    >>> average([1000000, 1000004])
+    1000002.0
     """
     if len(data) == 0:
         raise ValueError("List must contain at least one value")
@@ -30,6 +43,10 @@ def variance(data):
     :returns: Population variance of values in data list.
     :raises ValueError: If the data parameter is empty.
 
+    >>> variance([])
+    Traceback (most recent call last):
+        ...
+    ValueError: List must contain at least one value
     >>> variance([1])
     0.0
     >>> variance([1, 1, 1, 1])
@@ -54,7 +71,21 @@ def stdev(data):
                  will be computed. Must contain at least one element.
     :returns: Standard deviation of the values in the data list.
     :raises ValueError: If the data parameter is empty.
+
+    >>> stdev([])
+    Traceback (most recent call last):
+        ...
+    ValueError: List must contain at least one value
+    >>> stdev([1])
+    0.0
+    >>> stdev([1, 1, 1, 1])
+    0.0
+    >>> stdev([1, 2])
+    0.5
+    >>> stdev([1000000, 1000004])
+    2
     """
     if len(data) == 0:
         raise ValueError("List must contain at least one value")
     return sqrt(variance(data))
+# type: ignore
